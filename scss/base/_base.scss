@@ -1,0 +1,26 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    background-color: #000;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Aeonik TRIAL';
+    color: #fdfdfd;
+    //   color: var(--text-color);
+    //   background-color: var(--bg-color);
+}
+
+.heading {
+    font-family: 'Clash Display';
+}
+
+.icon {
+    //   filter: var(--icon-filter-color);
+}

@@ -1,0 +1,115 @@
+@use '../abstracts';
+
+.header {
+    padding: 24px 0;
+
+    @include abstracts.breakpoint(lg) {
+        padding: 12px 0;
+    }
+
+    &__more-btn {
+        img {
+            @include abstracts.breakpoint(lg) {
+                width: 24px;
+            }
+        }
+    }
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__search-btn {
+        img {
+            @include abstracts.breakpoint(lg) {
+                width: 24px;
+            }
+        }
+    }
+}
+
+.nav-bar {
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 44px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        color: #fdfdfd;
+
+        font-size: 1.8rem;
+
+        font-weight: 400;
+        line-height: 1;
+    }
+
+    @include abstracts.breakpoint(lg) {
+        display: none;
+    }
+}
+
+.form-search {
+    width: 394px;
+
+    &__wrap {
+        height: 46px;
+        width: 100%;
+        border-radius: 8px;
+        background: #212127;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__icon {
+        margin-left: 15px;
+        cursor: pointer;
+    }
+
+    &__input {
+        padding-right: 15px;
+        flex: 1;
+        height: 100%;
+        background-color: transparent;
+        color: #dfdfdf;
+
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+
+        &::placeholder {
+            color: #9d9d9d;
+        }
+    }
+}
+
+.logo {
+    cursor: pointer;
+
+    img {
+        @include abstracts.breakpoint(lg) {
+            width: 68px;
+        }
+    }
+}
+
+.top-action {
+    button {
+        color: #fff;
+
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+        cursor: pointer;
+        border-radius: 21px;
+        border: 1px solid #fff;
+        padding: 12px 24px;
+    }
+}
