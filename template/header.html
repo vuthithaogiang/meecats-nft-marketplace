@@ -6,7 +6,7 @@
         </button>
         <!-- Logo -->
         <div class="logo">
-            <a href="#!"><img alt="meecats" src="./assets/icons/logo.svg" /></a>
+            <a href="./"><img alt="meecats" src="./assets/icons/logo.svg" /></a>
         </div>
         <!-- Search -->
 
@@ -14,15 +14,99 @@
             <img alt="" src="./assets/icons/search.svg" />
         </button>
 
-        <form class="form-search d-lg-none" method="get" action="" onsubmit="(e) => e.preventDefault();">
+        <form class="form-search d-xl-none" method="get" action="" onsubmit="(e) => e.preventDefault();">
             <div class="form-search__wrap">
-                <img class="form-search__icon" alt="" src="../assets/icons/search.svg" />
+                <img
+                    class="form-search__icon js-toggle"
+                    toggle-target="#search-result"
+                    alt=""
+                    src="../assets/icons/search.svg"
+                />
                 <input
-                    class="form-search__input"
+                    autocomplete="off"
+                    class="form-search__input js-toggle"
                     name="search"
                     type="text"
                     placeholder="Search for artworks, collections, artists etc"
+                    toggle-target="#search-result"
                 />
+            </div>
+
+            <div id="search-result" class="search-result hide">
+                <div class="search-result__inner">
+                    <h4 class="search-result__title">People</h4>
+                    <ul class="search-result__list">
+                        <li class="search-result__item">
+                            <img class="search-result__avatar" alt="" src="./assets/images/avatar1.png" />
+                            <div class="search-result__group">
+                                <p class="search-result__desc">Blwants</p>
+                                <span class="search-result__tag">@blwants</span>
+                            </div>
+                        </li>
+                        <li class="search-result__item">
+                            <img class="search-result__avatar" alt="" src="./assets/images/avatar2.png" />
+                            <div class="search-result__group">
+                                <p class="search-result__desc">Jhon week</p>
+                                <span class="search-result__tag">@jhonweek</span>
+                            </div>
+                        </li>
+                        <li class="search-result__item">
+                            <img class="search-result__avatar" alt="" src="./assets/images/avatar3.png" />
+                            <div class="search-result__group">
+                                <p class="search-result__desc">Alom Tanvir</p>
+                                <span class="search-result__tag">@alomtanvir</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <h4 class="search-result__title">NFT</h4>
+                    <ul class="search-result__list">
+                        <li class="search-result__item">
+                            <img class="search-result__thumb" alt="" src="./assets/images/avatar4.png" />
+                            <div class="search-result__group">
+                                <p class="search-result__desc">Folk Scifi- the revenaler of ligth</p>
+                                <span class="search-result__tag">@blwants</span>
+                            </div>
+                        </li>
+                        <li class="search-result__item">
+                            <img class="search-result__thumb" alt="" src="./assets/images/avatar5.png" />
+                            <div class="search-result__group">
+                                <p class="search-result__desc">Folk Scifi- the revenaler of ligth</p>
+                                <span class="search-result__tag">@blwants</span>
+                            </div>
+                        </li>
+                        <li class="search-result__item">
+                            <img class="search-result__thumb" alt="" src="./assets/images/avatar6.png" />
+                            <div class="search-result__group">
+                                <p class="search-result__desc">Folk Scifi- the revenaler of ligth</p>
+                                <span class="search-result__tag">@blwants</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <h4 class="search-result__title">Collection</h4>
+                    <ul class="search-result__list">
+                        <li class="search-result__item">
+                            <img class="search-result__thumb" alt="" src="./assets/images/avatar7.png" />
+                            <div class="search-result__group">
+                                <p class="search-result__desc">Folk Scifi- the revenaler of ligth</p>
+                                <span class="search-result__tag">@blwants</span>
+                            </div>
+                        </li>
+                        <li class="search-result__item">
+                            <img class="search-result__thumb" alt="" src="./assets/images/avatar8.png" />
+                            <div class="search-result__group">
+                                <p class="search-result__desc">Folk Scifi- the revenaler of ligth</p>
+                                <span class="search-result__tag">@blwants</span>
+                            </div>
+                        </li>
+                        <li class="search-result__item">
+                            <img class="search-result__thumb" alt="" src="./assets/images/avatar9.png" />
+                            <div class="search-result__group">
+                                <p class="search-result__desc">Folk Scifi- the revenaler of ligth</p>
+                                <span class="search-result__tag">@blwants</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </form>
         <!-- Navbar -->
@@ -33,6 +117,68 @@
                         Home
                         <img class="nav-bar__arrow" alt="" src="./assets/icons/arrow-down.svg" />
                     </a>
+                    <div class="dropdown">
+                        <div class="dropdown__inner">
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item">
+                                    <a class="dropdown__link" href="#!">
+                                        <img class="icon" alt="" src="./assets/icons/grid-square.svg" />
+                                        <span class="dropdown__text">Home 1</span>
+
+                                        <img class="icon-rotate" alt="" src="./assets/icons/arrow-down.svg" />
+                                    </a>
+                                    <div class="sub-menu">
+                                        <div class="sub-menu__inner">
+                                            <ul class="dropdown__list">
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__link" href="#!">
+                                                        <img class="icon" alt="" src="./assets/icons/grid-square.svg" />
+                                                        <span class="dropdown__text">Home 1.1</span>
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__link" href="#!">
+                                                        <img class="icon" alt="" src="./assets/icons/grid-square.svg" />
+                                                        <span class="dropdown__text">Home 1.2</span>
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__link" href="#!">
+                                                        <img class="icon" alt="" src="./assets/icons/grid-square.svg" />
+                                                        <span class="dropdown__text">Home 1.3</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a class="dropdown__link" href="#!">
+                                        <img class="icon" alt="" src="./assets/icons/grid-square.svg" />
+                                        <span class="dropdown__text">Home 2</span>
+
+                                        <img class="icon-rotate" alt="" src="./assets/icons/arrow-down.svg" />
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a class="dropdown__link" href="#!">
+                                        <img class="icon" alt="" src="./assets/icons/grid-square.svg" />
+                                        <span class="dropdown__text">Home 3</span>
+
+                                        <img class="icon-rotate" alt="" src="./assets/icons/arrow-down.svg" />
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a class="dropdown__link" href="#!">
+                                        <img class="icon" alt="" src="./assets/icons/grid-square.svg" />
+                                        <span class="dropdown__text">Home 4</span>
+
+                                        <img class="icon-rotate" alt="" src="./assets/icons/arrow-down.svg" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
                 <li class="nav-bar__item">
                     <a href="#!" class="nav-bar__link">
@@ -40,12 +186,185 @@
 
                         <img class="nav-bar__arrow" alt="" src="./assets/icons/arrow-down.svg" />
                     </a>
+
+                    <div class="dropdown">
+                        <div class="dropdown__inner">
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item">
+                                    <a class="dropdown__link" href="#!">
+                                        <img class="icon" alt="" src="./assets/icons/grid-square.svg" />
+                                        <span class="dropdown__text">Explore 1</span>
+
+                                        <img class="icon-rotate" alt="" src="./assets/icons/arrow-down.svg" />
+                                    </a>
+                                    <div class="sub-menu">
+                                        <div class="sub-menu__inner">
+                                            <ul class="dropdown__list">
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__link" href="#!">
+                                                        <img class="icon" alt="" src="./assets/icons/grid-square.svg" />
+                                                        <span class="dropdown__text">Explore 1.1</span>
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__link" href="#!">
+                                                        <img class="icon" alt="" src="./assets/icons/grid-square.svg" />
+                                                        <span class="dropdown__text">Explore 1.2</span>
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__link" href="#!">
+                                                        <img class="icon" alt="" src="./assets/icons/grid-square.svg" />
+                                                        <span class="dropdown__text">Explore 1.3</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a class="dropdown__link" href="#!">
+                                        <img class="icon" alt="" src="./assets/icons/grid-square.svg" />
+                                        <span class="dropdown__text">Explore 2</span>
+
+                                        <img class="icon-rotate" alt="" src="./assets/icons/arrow-down.svg" />
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a class="dropdown__link" href="#!">
+                                        <img class="icon" alt="" src="./assets/icons/grid-square.svg" />
+                                        <span class="dropdown__text">Explore 3</span>
+
+                                        <img class="icon-rotate" alt="" src="./assets/icons/arrow-down.svg" />
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a class="dropdown__link" href="#!">
+                                        <img class="icon" alt="" src="./assets/icons/grid-square.svg" />
+                                        <span class="dropdown__text">Explore 4</span>
+
+                                        <img class="icon-rotate" alt="" src="./assets/icons/arrow-down.svg" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
                 <li class="nav-bar__item">
                     <a href="#!" class="nav-bar__link">
                         Community
                         <img class="nav-bar__arrow" alt="" src="./assets/icons/arrow-down.svg" />
                     </a>
+                    <div class="dropdown">
+                        <div class="dropdown__inner">
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item">
+                                    <a class="dropdown__link" href="#!">
+                                        <img class="icon" alt="" src="./assets/icons/grid-square.svg" />
+                                        <span class="dropdown__text">Community 1</span>
+
+                                        <img class="icon-rotate" alt="" src="../assets/icons/arrow-down.svg" />
+                                    </a>
+                                    <div class="sub-menu">
+                                        <div class="sub-menu__inner">
+                                            <ul class="dropdown__list">
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__link" href="#!">
+                                                        <img
+                                                            class="icon"
+                                                            alt=""
+                                                            src="../assets/icons/grid-square.svg"
+                                                        />
+                                                        <span class="dropdown__text">Community 1.1</span>
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__link" href="#!">
+                                                        <img
+                                                            class="icon"
+                                                            alt=""
+                                                            src="../assets/icons/grid-square.svg"
+                                                        />
+                                                        <span class="dropdown__text">Community 1.2</span>
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__link" href="#!">
+                                                        <img
+                                                            class="icon"
+                                                            alt=""
+                                                            src="../assets/icons/grid-square.svg"
+                                                        />
+                                                        <span class="dropdown__text">Community 1.3</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a class="dropdown__link" href="#!">
+                                        <img class="icon" alt="" src="../assets/icons/grid-square.svg" />
+                                        <span class="dropdown__text">Community 2</span>
+
+                                        <img class="icon-rotate" alt="" src="../assets/icons/arrow-down.svg" />
+                                    </a>
+                                    <div class="sub-menu">
+                                        <div class="sub-menu__inner">
+                                            <ul class="dropdown__list">
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__link" href="#!">
+                                                        <img
+                                                            class="icon"
+                                                            alt=""
+                                                            src="../assets/icons/grid-square.svg"
+                                                        />
+                                                        <span class="dropdown__text">Community 2.1</span>
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__link" href="#!">
+                                                        <img
+                                                            class="icon"
+                                                            alt=""
+                                                            src="../assets/icons/grid-square.svg"
+                                                        />
+                                                        <span class="dropdown__text">Community 2.2</span>
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown__item">
+                                                    <a class="dropdown__link" href="#!">
+                                                        <img
+                                                            class="icon"
+                                                            alt=""
+                                                            src="../assets/icons/grid-square.svg"
+                                                        />
+                                                        <span class="dropdown__text">Community 2.3</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a class="dropdown__link" href="#!">
+                                        <img class="icon" alt="" src="../assets/icons/grid-square.svg" />
+                                        <span class="dropdown__text">Community 3</span>
+
+                                        <img class="icon-rotate" alt="" src="../assets/icons/arrow-down.svg" />
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a class="dropdown__link" href="#!">
+                                        <img class="icon" alt="" src="../assets/icons/grid-square.svg" />
+                                        <span class="dropdown__text">Community 4</span>
+
+                                        <img class="icon-rotate" alt="" src="../assets/icons/arrow-down.svg" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </nav>

@@ -1,0 +1,102 @@
+.dropdown {
+    position: absolute;
+    left: 0;
+    min-width: 200px;
+    visibility: hidden;
+    opacity: 0;
+
+    transition: visibility, opacity;
+    transition-duration: 0.4s;
+    &__inner {
+        margin-top: 8px;
+
+        padding: 6px;
+        border-radius: 6px;
+        background: #191919;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    &__item {
+        position: relative;
+    }
+
+    &__item:hover .sub-menu {
+        visibility: visible;
+        opacity: 1;
+    }
+    &__link {
+        border-radius: 6px;
+
+        padding: 8px 0 8px 8px;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 12px;
+        transition: background-color 0.4s;
+
+        .icon {
+            filter: brightness(0) saturate(100%) invert(90%) sepia(6%) saturate(17%) hue-rotate(336deg) brightness(95%)
+                contrast(84%);
+            transition: filter 0.4s;
+        }
+        &:hover {
+            background-color: #222a2a;
+
+            .icon {
+                filter: brightness(0) saturate(100%) invert(85%) sepia(99%) saturate(2%) hue-rotate(209deg)
+                    brightness(109%) contrast(101%);
+            }
+        }
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #cdcdcd;
+        flex: 1;
+        flex-shrink: 0;
+        transition: color 0.4s;
+    }
+    &__link:hover &__text {
+        color: #fff;
+    }
+
+    &__link:hover .icon-rotate {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.icon-rotate {
+    rotate: -90deg;
+    margin-left: auto;
+    visibility: hidden;
+    opacity: 0;
+
+    transition: opacity, visibility;
+    transition-duration: 0.4s;
+}
+
+.sub-menu {
+    width: 174px;
+    position: absolute;
+    left: calc(100% + 6px);
+    top: 50%;
+    visibility: hidden;
+    opacity: 0;
+
+    transition: opacity, visibility;
+    transition-duration: 0.4s;
+
+    &__inner {
+        padding: 4px;
+        margin-left: 6px;
+        background: #191919;
+        border-radius: 4px;
+    }
+}

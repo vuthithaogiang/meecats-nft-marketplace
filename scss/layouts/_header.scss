@@ -46,6 +46,16 @@
 
         font-weight: 400;
         line-height: 1;
+        height: 44px;
+    }
+
+    &__item {
+        position: relative;
+    }
+
+    &__item:hover .dropdown {
+        visibility: visible;
+        opacity: 1;
     }
 
     @include abstracts.breakpoint(lg) {
@@ -54,6 +64,7 @@
 }
 
 .form-search {
+    position: relative;
     width: 394px;
 
     &__wrap {
@@ -86,6 +97,10 @@
         &::placeholder {
             color: #9d9d9d;
         }
+    }
+
+    @include abstracts.breakpoint(lg) {
+        flex: 1;
     }
 }
 
