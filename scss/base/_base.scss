@@ -1,3 +1,4 @@
+@use '../abstracts';
 *,
 ::before,
 ::after {
@@ -7,6 +8,14 @@
 html {
     font-size: 62.5%;
     background-color: #000;
+}
+
+:root {
+    --height-header: 94px;
+
+    @include abstracts.breakpoint(lg) {
+        --height-header: 54px;
+    }
 }
 
 body {

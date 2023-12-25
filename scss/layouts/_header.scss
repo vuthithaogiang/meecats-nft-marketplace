@@ -2,6 +2,13 @@
 
 .header {
     padding: 24px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 90;
+    background-color: #000;
 
     @include abstracts.breakpoint(lg) {
         padding: 12px 0;
@@ -20,6 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 
     &__search-btn {
         img {
@@ -100,7 +108,20 @@
     }
 
     @include abstracts.breakpoint(lg) {
-        flex: 1;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        bottom: -60px;
+        transition: translate 0.4s;
+        display: none;
+
+        &.hide {
+            display: flex;
+        }
+
+        &.show {
+            display: none;
+        }
     }
 }
 

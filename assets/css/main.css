@@ -171,6 +171,15 @@ html {
   background-color: #000;
 }
 
+:root {
+  --height-header: 94px;
+}
+@media (max-width: 991.98px) {
+  :root {
+    --height-header: 54px;
+  }
+}
+
 body {
   font-size: 1.6rem;
   font-family: "Aeonik TRIAL";
@@ -1320,6 +1329,12 @@ html ::-webkit-scrollbar-track {
 }
 .header {
   padding: 24px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 90;
+  background-color: #000;
 }
 @media (max-width: 991.98px) {
   .header {
@@ -1336,6 +1351,7 @@ html ::-webkit-scrollbar-track {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 @media (max-width: 991.98px) {
   .top-bar__search-btn img {
@@ -1403,7 +1419,18 @@ html ::-webkit-scrollbar-track {
 }
 @media (max-width: 991.98px) {
   .form-search {
-    flex: 1;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: -60px;
+    transition: translate 0.4s;
+    display: none;
+  }
+  .form-search.hide {
+    display: flex;
+  }
+  .form-search.show {
+    display: none;
   }
 }
 
@@ -1526,6 +1553,12 @@ html ::-webkit-scrollbar-track {
   width: 820px;
   transition: opacity, visibility;
   transition-duration: 0.3s;
+}
+@media (max-width: 991.98px) {
+  .search-result {
+    top: 100%;
+    width: 100%;
+  }
 }
 .search-result.show {
   visibility: visible;

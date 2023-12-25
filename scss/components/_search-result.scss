@@ -1,3 +1,4 @@
+@use '../abstracts';
 .search-result {
     position: absolute;
     left: 0;
@@ -5,6 +6,11 @@
 
     transition: opacity, visibility;
     transition-duration: 0.3s;
+
+    @include abstracts.breakpoint(lg) {
+        top: 100%;
+        width: 100%;
+    }
 
     &.show {
         visibility: visible;

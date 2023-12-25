@@ -1,4 +1,4 @@
-<div class="header__inner">
+<div class="header__inner container">
     <div class="top-bar">
         <!-- More btn -->
         <button class="top-bar__more-btn d-none d-lg-block">
@@ -10,11 +10,11 @@
         </div>
         <!-- Search -->
 
-        <button class="top-bar__search-btn d-none d-lg-block">
+        <button class="top-bar__search-btn d-none d-lg-block js-toggle" toggle-target="#form-search">
             <img alt="" src="./assets/icons/search.svg" />
         </button>
 
-        <form class="form-search d-xl-none" method="get" action="" onsubmit="(e) => e.preventDefault();">
+        <form id="form-search" class="form-search show" method="get" action="" onsubmit="(e) => e.preventDefault();">
             <div class="form-search__wrap">
                 <img
                     class="form-search__icon js-toggle"
