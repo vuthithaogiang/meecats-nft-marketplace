@@ -107,6 +107,10 @@
         }
     }
 
+    @include abstracts.breakpoint(xl) {
+        display: none;
+    }
+
     @include abstracts.breakpoint(lg) {
         position: absolute;
         left: 0;
