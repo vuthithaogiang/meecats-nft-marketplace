@@ -1,18 +1,35 @@
+@use '../abstracts';
+
 .dropdown {
     position: absolute;
     left: 0;
     min-width: 200px;
+
     visibility: hidden;
     opacity: 0;
 
     transition: visibility, opacity;
     transition-duration: 0.4s;
+
+    // @include abstracts.breakpoint(lg) {
+    //     position: initial;
+    //     display: none;
+    //     //display: block;
+    //     // visibility: visible;
+    //     // opacity: 1;
+    // }
     &__inner {
         margin-top: 8px;
 
         padding: 6px;
         border-radius: 6px;
         background: #191919;
+
+        @include abstracts.breakpoint(lg) {
+            border-radius: 0;
+            padding: 0;
+            background-color: transparent;
+        }
     }
 
     &__list {
@@ -27,6 +44,11 @@
     &__item:hover .sub-menu {
         visibility: visible;
         opacity: 1;
+
+        @include abstracts.breakpoint(lg) {
+            position: initial;
+            display: block;
+        }
     }
     &__link {
         border-radius: 6px;
@@ -93,10 +115,33 @@
     transition: opacity, visibility;
     transition-duration: 0.4s;
 
+    @include abstracts.breakpoint(lg) {
+        // visibility: visible;
+        // opacity: 1;
+        margin-left: 22px;
+        width: 200px;
+
+        .icon {
+            display: none;
+        }
+
+        .dropdown {
+            &__text {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
     &__inner {
         padding: 4px;
         margin-left: 6px;
         background: #191919;
         border-radius: 4px;
+
+        @include abstracts.breakpoint(lg) {
+            padding: 0;
+            border-radius: 0;
+            background-color: transparent;
+        }
     }
 }

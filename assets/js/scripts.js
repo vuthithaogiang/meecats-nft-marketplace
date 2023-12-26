@@ -131,7 +131,6 @@ function handleActiveMenu() {
             });
         });
     };
-    
 
     init();
 
@@ -186,7 +185,7 @@ window.addEventListener('template-loaded', () => {
         link.onclick = () => {
             if (window.innerWidth > 991) return;
             const item = link.closest('li');
-            item.classList.toggle('navbar__item--active');
+            item.classList.toggle('nav-bar__item--active');
         };
     });
 });

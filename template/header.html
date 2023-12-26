@@ -1,7 +1,7 @@
 <div class="header__inner container">
     <div class="top-bar">
         <!-- More btn -->
-        <button class="top-bar__more-btn d-none d-lg-block">
+        <button class="top-bar__more-btn d-none d-lg-block js-toggle" toggle-target="#navbar">
             <img alt="" src="../assets/icons/menu.svg" />
         </button>
         <!-- Logo -->
@@ -110,8 +110,11 @@
             </div>
         </form>
         <!-- Navbar -->
-        <nav class="nav-bar">
-            <ul class="nav-bar__list">
+        <nav id="navbar" class="nav-bar hide">
+            <button class="nav-bar__close-btn d-none d-lg-block js-toggle" toggle-target="#navbar">
+                <img alt="" src="./assets/icons/arrow-left.svg" />
+            </button>
+            <ul class="nav-bar__list js-dropdown-list">
                 <li class="nav-bar__item">
                     <a href="#!" class="nav-bar__link">
                         Home
@@ -366,8 +369,14 @@
                         </div>
                     </div>
                 </li>
+                <li class="nav-bar__item d-none d-lg-block">
+                    <div class="top-action">
+                        <button>Connect</button>
+                    </div>
+                </li>
             </ul>
         </nav>
+        <div class="nav-bar__overlay js-toggle" toggle-target="#navbar"></div>
 
         <div class="top-action d-lg-none">
             <button>Connect</button>

@@ -50,3 +50,13 @@ html ::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, 0);
 }
 //End Scroll bar
+
+a,
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
