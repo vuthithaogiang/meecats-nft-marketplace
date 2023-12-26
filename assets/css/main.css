@@ -1663,6 +1663,11 @@ html ::-webkit-scrollbar-track {
     padding-right: 0;
   }
 }
+@media (max-width: 767.98px) {
+  .intro__left {
+    width: 100%;
+  }
+}
 .intro__text {
   color: #eaddb8;
   font-size: 2rem;
@@ -1670,6 +1675,11 @@ html ::-webkit-scrollbar-track {
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.24px;
+}
+@media (max-width: 767.98px) {
+  .intro__text {
+    font-size: 1.5rem;
+  }
 }
 .intro__heading {
   margin-top: 20px;
@@ -1679,6 +1689,12 @@ html ::-webkit-scrollbar-track {
   font-weight: 600;
   line-height: 1.1;
   letter-spacing: 0.8px;
+}
+@media (max-width: 767.98px) {
+  .intro__heading {
+    margin-top: 12px;
+    font-size: 4.3rem;
+  }
 }
 .intro__desc {
   margin-top: 18px;
@@ -1690,11 +1706,23 @@ html ::-webkit-scrollbar-track {
   letter-spacing: 0.2px;
   width: 488px;
 }
+@media (max-width: 767.98px) {
+  .intro__desc {
+    margin-top: 12px;
+    font-size: 1.4rem;
+    width: 100%;
+  }
+}
 .intro__action {
   margin-top: 40px;
   display: flex;
   align-items: center;
   gap: 49px;
+}
+@media (max-width: 767.98px) {
+  .intro__action {
+    margin-top: 24px;
+  }
 }
 .intro__button {
   border-radius: 54px;
@@ -1706,11 +1734,23 @@ html ::-webkit-scrollbar-track {
   font-weight: 500;
   line-height: 1;
 }
+@media (max-width: 767.98px) {
+  .intro__button {
+    font-size: 1.5rem;
+    padding: 14px 20px;
+  }
+}
 .intro__wrap-icon {
   width: 53px;
   height: 53px;
   border-radius: 50%;
   background-color: #7c3fd0;
+}
+@media (max-width: 767.98px) {
+  .intro__wrap-icon {
+    width: 50px;
+    height: 50px;
+  }
 }
 .intro__icon {
   width: 100%;
@@ -1748,6 +1788,11 @@ html ::-webkit-scrollbar-track {
     flex: 1;
     width: 100%;
     height: 370px;
+  }
+}
+@media (max-width: 767.98px) {
+  .intro__wrap-thumb {
+    height: 185px;
   }
 }
 .intro__img-thumb-1 {
@@ -1800,6 +1845,11 @@ html ::-webkit-scrollbar-track {
     height: 173px;
   }
 }
+@media (max-width: 767.98px) {
+  .intro__img-thumb-2 {
+    height: 67px;
+  }
+}
 .intro__img-thumb-3 {
   width: 100%;
   height: 320px;
@@ -1808,6 +1858,11 @@ html ::-webkit-scrollbar-track {
 @media (max-width: 991.98px) {
   .intro__img-thumb-3 {
     height: 190px;
+  }
+}
+@media (max-width: 767.98px) {
+  .intro__img-thumb-3 {
+    height: 111px;
   }
 }
 @media (max-width: 991.98px) {
@@ -1822,6 +1877,11 @@ html ::-webkit-scrollbar-track {
 @media (max-width: 991.98px) {
   .intro__img-thumb-4 {
     height: auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .intro__img-thumb-4 {
+    height: 185px;
   }
 }
 
