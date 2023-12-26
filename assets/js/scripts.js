@@ -293,6 +293,7 @@ window.addEventListener('template-loaded', () => {
         }
         thumbnails[currentSlide].classList.add('active');
     }
+
     const preSlide = document.getElementById('prev');
     const nextSlide = document.getElementById('next');
 

@@ -2043,4 +2043,19 @@ select {
   }
 }
 
+.art-works {
+  margin-top: 140px;
+}
+.art-works__heading {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 62px;
+  width: 524px;
+  text-align: center;
+  color: #d9d9d9;
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
 /*# sourceMappingURL=main.css.map */
