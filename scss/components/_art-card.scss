@@ -1,0 +1,189 @@
+@use '../abstracts';
+
+.art-card {
+    width: 100%;
+    &__inner {
+        background: #212127;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    &__owner {
+        padding: 18px 0 13px 22px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        @include abstracts.breakpoint(md) {
+            padding: 14px 0 13px 20px;
+        }
+    }
+
+    &__avatar {
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid #b6b6b6;
+
+        @include abstracts.breakpoint(md) {
+            width: 28px;
+            height: 28px;
+        }
+
+        &.small {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #000;
+        }
+    }
+
+    &__thumbnail {
+        width: 100%;
+        position: relative;
+    }
+
+    &__actions {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        background: #212127;
+        transform: translate(100%, -50%);
+
+        width: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 46px;
+        padding: 30px 23px;
+
+        transition: transform 0.3s;
+
+        @include abstracts.breakpoint(md) {
+            padding: 28px 20px;
+            gap: 40px;
+        }
+    }
+
+    &__thumbnail:hover &__actions {
+        transform: translate(0%, -50%);
+    }
+
+    &__action:nth-child(1) {
+        img {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+
+            @include abstracts.breakpoint(md) {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+    &__action:not(:nth-child(1)) {
+        img {
+            width: 32px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+
+            @include abstracts.breakpoint(md) {
+                width: 25px;
+            }
+        }
+
+        div {
+            color: #fff;
+            cursor: pointer;
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 1.22;
+            margin-top: 4px;
+
+            @include abstracts.breakpoint(md) {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 362px;
+        object-fit: cover;
+
+        @include abstracts.breakpoint(md) {
+            height: auto;
+        }
+    }
+
+    &__info {
+        padding: 12px 23px;
+
+        @include abstracts.breakpoint(md) {
+            padding: 10px 20px;
+        }
+    }
+
+    &__name {
+        color: #b6b6b6;
+
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px; /* 146.667% */
+    }
+
+    &__token {
+        margin-top: 7px;
+        color: #fff;
+
+        font-size: 2rem;
+
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: 2.5px;
+    }
+
+    &__bottom {
+        padding: 12px 36px 23px 23px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        @include abstracts.breakpoint(md) {
+            padding: 10px 20px 20px 20px;
+        }
+    }
+
+    &__group-owners {
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+
+        img:not(:nth-child(1)) {
+            margin-left: -6px;
+        }
+    }
+
+    &__title {
+        color: #b6b6b6;
+
+        font-size: 1.5rem;
+
+        font-weight: 400;
+        line-height: 1.467;
+    }
+
+    &__price {
+        color: #fff;
+
+        font-size: 1.5rem;
+
+        font-weight: 400;
+        line-height: 1.467;
+    }
+}

@@ -1,0 +1,33 @@
+@use '../abstracts';
+
+.filter {
+    &__inner {
+        padding-bottom: 18px;
+    }
+    &__select {
+        display: flex;
+        align-items: center;
+        gap: 29px;
+
+        @include abstracts.breakpoint(md) {
+            gap: 16px;
+            color: #d2d2d2;
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 1.83;
+        }
+    }
+
+    &__group {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        @include abstracts.breakpoint(md) {
+            color: #d2d2d2;
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 1.83;
+        }
+    }
+}

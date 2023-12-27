@@ -191,8 +191,8 @@ window.addEventListener('template-loaded', () => {
 });
 
 window.addEventListener('template-loaded', () => {
-    const tabsSelector = 'profile-subnav__item';
-    const contentsSelector = 'profile-subnav__content';
+    const tabsSelector = 'art-works__nav-item';
+    const contentsSelector = 'art-works__content';
 
     const tabActive = `${tabsSelector}--current`;
     const contentActive = `${contentsSelector}--current`;
