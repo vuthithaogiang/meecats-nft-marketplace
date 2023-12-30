@@ -42,6 +42,7 @@
 }
 
 .collectible-card {
+    cursor: pointer;
     flex-shrink: 0;
     &__inner {
         background-color: #212127;
@@ -84,6 +85,10 @@
             object-fit: cover;
             border-radius: 50%;
         }
+
+        img:not(:nth-child(1)) {
+            margin-left: -6px;
+        }
     }
 
     &__icon {
@@ -120,5 +125,13 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        span {
+            color: #d3d3d3;
+            font-size: 1.3rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1;
+        }
     }
 }

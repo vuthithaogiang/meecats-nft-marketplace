@@ -2851,6 +2851,7 @@ select {
 }
 
 .collectible-card {
+  cursor: pointer;
   flex-shrink: 0;
 }
 .collectible-card__inner {
@@ -2890,6 +2891,9 @@ select {
   object-fit: cover;
   border-radius: 50%;
 }
+.collectible-card__owners img:not(:nth-child(1)) {
+  margin-left: -6px;
+}
 .collectible-card__icon img {
   width: 32px;
 }
@@ -2918,6 +2922,13 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.collectible-card__stats span {
+  color: #d3d3d3;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1;
 }
 
 /*# sourceMappingURL=main.css.map */
