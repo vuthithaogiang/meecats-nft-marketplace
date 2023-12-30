@@ -1,0 +1,144 @@
+@use '../abstracts';
+
+.collection-card {
+    &__inner {
+        position: relative;
+        width: 100%;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__name {
+        padding: 48px 34px 17px;
+        color: #ececec;
+        font-size: 3.4rem;
+        font-weight: 600;
+        line-height: 1.35;
+        letter-spacing: 4.76px;
+
+        @include abstracts.breakpoint(xl) {
+            padding: 20px 20px 10px 20px;
+        }
+
+        @include abstracts.breakpoint(lg) {
+            font-size: 2.4rem;
+        }
+
+        @include abstracts.breakpoint(md) {
+            color: #ececec;
+
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 30px; /* 150% */
+            letter-spacing: 2.8px;
+        }
+    }
+
+    &__author {
+        width: 166px;
+        height: 40px;
+        margin-left: 34px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border-radius: 33px;
+        background: rgba(217, 217, 217, 0.27);
+        backdrop-filter: blur(4.5px);
+
+        @include abstracts.breakpoint(xl) {
+            margin-left: 20px;
+            width: 144px;
+        }
+
+        img {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        p {
+            color: #fff;
+            font-size: 1.5rem;
+
+            font-weight: 400;
+            line-height: 1;
+        }
+    }
+
+    &__info {
+        position: absolute;
+        bottom: 46px;
+        left: 34px;
+        right: 34px;
+        padding: 30px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        background: rgba(246, 246, 246, 0.2);
+        backdrop-filter: blur(91.5px);
+
+        @include abstracts.breakpoint(xl) {
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            padding: 20px 14px;
+        }
+
+        @include abstracts.breakpoint(lg) {
+            display: none;
+        }
+
+        @include abstracts.breakpoint(md) {
+            display: flex;
+        }
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+    &__value {
+        color: #fff;
+
+        font-size: 2.4rem;
+
+        font-weight: 500;
+        line-height: 1;
+
+        @include abstracts.breakpoint(xl) {
+            font-size: 2rem;
+        }
+    }
+
+    &__group-collected {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 50%;
+
+            @include abstracts.breakpoint(xl) {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        img:not(:nth-child(1)) {
+            margin-left: -9px;
+        }
+    }
+}

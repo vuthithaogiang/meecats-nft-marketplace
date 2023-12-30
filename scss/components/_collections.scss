@@ -1,0 +1,29 @@
+@use '../abstracts';
+
+.collections {
+    &__inner {
+        margin-top: 160px;
+
+        @include abstracts.breakpoint(lg) {
+            margin-top: 60px;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 60px;
+        color: #fff;
+        font-size: 5rem;
+        font-weight: 500;
+        line-height: 1.2;
+        text-transform: capitalize;
+
+        @include abstracts.breakpoint(lg) {
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+
+        @include abstracts.breakpoint(md) {
+            font-size: 2rem;
+        }
+    }
+}

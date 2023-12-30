@@ -89,6 +89,17 @@ window.addEventListener('resize', calArrowPos);
 // Tính toán lại vị trí arrow sau khi tải template
 window.addEventListener('template-loaded', calArrowPos);
 
+const calculateHeight = debounce(() => {
+    const items = $$('.collection-card__inner');
+
+    items.forEach((item) => {
+        const width = item.offsetWidth;
+        item.style.height = width + 'px';
+    });
+});
+
+window.addEventListener('resize', calculateHeight);
+window.addEventListener('template-loaded', calculateHeight);
 /**
  * Giữ active menu khi hover
  *
