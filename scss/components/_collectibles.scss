@@ -1,0 +1,124 @@
+@use '../abstracts';
+
+.collectibles {
+    &__inner {
+        margin-top: 100px;
+        padding-bottom: 80px;
+
+        @include abstracts.breakpoint(md) {
+            margin-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 60px;
+        color: #fff;
+        font-size: 5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.2;
+        text-transform: capitalize;
+
+        @include abstracts.breakpoint(md) {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__grids:not(:nth-child(1)) {
+        margin-top: 0;
+    }
+
+    &__grids {
+        flex-wrap: nowrap;
+        overflow-y: scroll;
+    }
+
+    &__grids .col {
+        min-width: 270px;
+        flex-shrink: 0;
+    }
+}
+
+.collectible-card {
+    flex-shrink: 0;
+    &__inner {
+        background-color: #212127;
+    }
+
+    &__thumb {
+        width: 100%;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    &__top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 16px 0 10px;
+    }
+
+    &__owners {
+        display: flex;
+        align-items: center;
+        height: 32px;
+        border-radius: 18px;
+        background: rgba(217, 217, 217, 0.25);
+        padding: 8px 10px;
+
+        img {
+            width: 20px;
+            height: 20px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+
+    &__icon {
+        img {
+            width: 32px;
+        }
+    }
+
+    &__info {
+        padding: 18px 15px 20px 20px;
+        border: 1px solid #fff;
+        background: #212127;
+        border-top: none;
+    }
+
+    &__type {
+        margin-bottom: 8px;
+        color: #d3d3d3;
+        font-size: 1.1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1;
+    }
+
+    &__name {
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 1;
+    }
+
+    &__stats {
+        margin-top: 19px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

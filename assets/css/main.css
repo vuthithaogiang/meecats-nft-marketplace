@@ -1572,6 +1572,7 @@ select {
 }
 
 .footer {
+  background: #212127;
   padding: 80px 0 40px 0;
 }
 .dropdown {
@@ -2810,6 +2811,113 @@ select {
 .community-form__button img {
   rotate: 180deg;
   filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(1%) hue-rotate(250deg) brightness(101%) contrast(102%);
+}
+
+.collectibles__inner {
+  margin-top: 100px;
+  padding-bottom: 80px;
+}
+@media (max-width: 767.98px) {
+  .collectibles__inner {
+    margin-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+.collectibles__heading {
+  margin-bottom: 60px;
+  color: #fff;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+@media (max-width: 767.98px) {
+  .collectibles__heading {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+}
+.collectibles__grids:not(:nth-child(1)) {
+  margin-top: 0;
+}
+.collectibles__grids {
+  flex-wrap: nowrap;
+  overflow-y: scroll;
+}
+.collectibles__grids .col {
+  min-width: 270px;
+  flex-shrink: 0;
+}
+
+.collectible-card {
+  flex-shrink: 0;
+}
+.collectible-card__inner {
+  background-color: #212127;
+}
+.collectible-card__thumb {
+  width: 100%;
+  position: relative;
+}
+.collectible-card__thumb img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+.collectible-card__top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px 0 10px;
+}
+.collectible-card__owners {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  border-radius: 18px;
+  background: rgba(217, 217, 217, 0.25);
+  padding: 8px 10px;
+}
+.collectible-card__owners img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.collectible-card__icon img {
+  width: 32px;
+}
+.collectible-card__info {
+  padding: 18px 15px 20px 20px;
+  border: 1px solid #fff;
+  background: #212127;
+  border-top: none;
+}
+.collectible-card__type {
+  margin-bottom: 8px;
+  color: #d3d3d3;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1;
+}
+.collectible-card__name {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1;
+}
+.collectible-card__stats {
+  margin-top: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=main.css.map */
