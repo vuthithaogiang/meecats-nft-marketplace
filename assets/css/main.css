@@ -2598,4 +2598,71 @@ select {
   }
 }
 
+.discover {
+  margin-top: 120px;
+}
+@media (max-width: 991.98px) {
+  .discover {
+    margin-top: 60px;
+  }
+}
+.discover__heading {
+  color: #fff;
+  font-size: 5.6rem;
+  font-weight: 600;
+  line-height: 1.07;
+  letter-spacing: 0.56px;
+}
+@media (max-width: 991.98px) {
+  .discover__heading {
+    font-size: 3.2rem;
+    max-width: 80%;
+  }
+}
+.discover__desc {
+  margin-top: 20px;
+  color: #cfcfcf;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+@media (max-width: 991.98px) {
+  .discover__desc {
+    margin-top: 12px;
+    font-size: 1.4rem;
+  }
+}
+.discover__left button {
+  margin-top: 40px;
+  color: #000;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  border-radius: 54px;
+  background: #17e3a6;
+  padding: 22px 23px;
+  cursor: pointer;
+}
+@media (max-width: 991.98px) {
+  .discover__left button {
+    font-size: 1.5rem;
+    padding: 14px 20px;
+  }
+}
+.discover__thumb {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  margin-left: 60px;
+}
+@media (max-width: 991.98px) {
+  .discover__thumb {
+    margin-left: 0;
+    margin-top: 46px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
