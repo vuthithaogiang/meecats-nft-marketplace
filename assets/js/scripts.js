@@ -100,6 +100,18 @@ const calculateHeight = debounce(() => {
 
 window.addEventListener('resize', calculateHeight);
 window.addEventListener('template-loaded', calculateHeight);
+
+const calculateHeightIntroductions = debounce(() => {
+    const items = $$('.instructions-card__inner');
+
+    items.forEach((item) => {
+        const width = item.offsetWidth;
+        item.style.height = width + 'px';
+    });
+});
+
+window.addEventListener('resize', calculateHeightIntroductions);
+window.addEventListener('template-loaded', calculateHeightIntroductions);
 /**
  * Giữ active menu khi hover
  *

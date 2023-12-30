@@ -2503,4 +2503,99 @@ select {
   margin-left: -9px;
 }
 
+.instructions__inner {
+  margin-top: 140px;
+}
+@media (max-width: 767.98px) {
+  .instructions__inner {
+    margin-top: 60px;
+  }
+}
+.instructions__heading {
+  margin-bottom: 40px;
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+@media (max-width: 767.98px) {
+  .instructions__heading {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+}
+
+.instructions-card {
+  width: 100%;
+  background-color: #212127;
+}
+.instructions-card__inner {
+  padding: 24px 20px;
+}
+@media (max-width: 767.98px) {
+  .instructions-card__inner {
+    padding: 14px;
+  }
+}
+.instructions-card__img {
+  display: block;
+  height: 76px;
+  width: auto;
+  object-fit: cover;
+  margin: 0 auto;
+}
+@media (max-width: 767.98px) {
+  .instructions-card__img {
+    height: 44px;
+  }
+}
+.instructions-card__title {
+  text-align: center;
+  margin-top: 18px;
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  max-width: 160px;
+  padding: 0 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 767.98px) {
+  .instructions-card__title {
+    font-size: 1.2rem;
+    margin-top: 8px;
+    max-width: 114px;
+  }
+}
+.instructions-card__separate {
+  display: block;
+  margin-top: 14px;
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+}
+@media (max-width: 767.98px) {
+  .instructions-card__separate {
+    margin-top: 8px;
+  }
+}
+.instructions-card__desc {
+  text-align: center;
+  margin-top: 14px;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.28px;
+}
+@media (max-width: 767.98px) {
+  .instructions-card__desc {
+    margin-top: 8px;
+    font-size: 0.8rem;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
