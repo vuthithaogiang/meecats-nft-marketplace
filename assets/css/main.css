@@ -3245,4 +3245,69 @@ select {
   }
 }
 
+.subscribe__inner {
+  margin-bottom: 120px;
+  align-items: center;
+}
+@media (max-width: 767.98px) {
+  .subscribe__inner {
+    margin-bottom: 60px;
+  }
+}
+.subscribe__heading {
+  color: #fff;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+}
+@media (max-width: 767.98px) {
+  .subscribe__heading {
+    font-size: 2rem;
+    text-align: center;
+    max-width: 70%;
+    margin: 0 auto;
+  }
+}
+.subscribe__desc {
+  margin-top: 18px;
+  margin-bottom: 90px;
+  color: #aaa;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+@media (max-width: 991.98px) {
+  .subscribe__desc {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .subscribe__desc {
+    font-size: 1rem;
+    max-width: 85%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+.subscribe__img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+.subscribe .community-form__wrap {
+  max-width: 80%;
+}
+@media (max-width: 767.98px) {
+  .subscribe .community-form__wrap {
+    max-width: initial;
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
