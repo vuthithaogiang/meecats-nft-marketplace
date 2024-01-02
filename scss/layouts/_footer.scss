@@ -1,7 +1,115 @@
+@use '../abstracts';
+
 .footer {
     background: #212127;
     padding: 80px 0 40px 0;
 
-    &__inner {
+    @include abstracts.breakpoint(lg) {
+        padding-top: 60px;
+    }
+
+    &__group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__navs {
+        display: flex;
+        align-items: center;
+        gap: 44px;
+
+        @include abstracts.breakpoint(lg) {
+            gap: 28px;
+        }
+
+        @include abstracts.breakpoint(md) {
+            justify-content: space-around;
+            margin-top: 44px;
+        }
+    }
+
+    &__nav {
+        color: #fdfdfd;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+
+        @include abstracts.breakpoint(md) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    &__social {
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__logo {
+        @include abstracts.breakpoint(lg) {
+            height: 28px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+
+        @include abstracts.breakpoint(md) {
+            justify-content: space-between;
+        }
+
+        p {
+            color: #fff;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%; /* 21px */
+            //text-decoration-line: underline;
+        }
+    }
+
+    &__separate {
+        width: 100%;
+        height: 1px;
+        background: #595959;
+        margin: 40px 0;
+
+        @include abstracts.breakpoint(md) {
+            margin: 20px 0;
+        }
+    }
+
+    &__link {
+        color: #fff;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 21px */
+        text-decoration: underline !important;
+        @include abstracts.breakpoint(md) {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        margin-bottom: 32px;
+        color: #fff;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 21px */
     }
 }
