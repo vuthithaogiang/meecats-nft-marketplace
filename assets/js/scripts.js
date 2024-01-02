@@ -235,95 +235,93 @@ window.addEventListener('template-loaded', () => {
     });
 });
 
-window.addEventListener('template-loaded', () => {
-    const switchBtn = document.querySelector('#switch-theme-btn');
-    if (switchBtn) {
-        switchBtn.onclick = function () {
-            const isDark = localStorage.dark === 'true';
-            document.querySelector('html').classList.toggle('dark', !isDark);
-            localStorage.setItem('dark', !isDark);
-            switchBtn.querySelector('span').textContent = isDark ? 'Dark mode' : 'Light mode';
-        };
-        const isDark = localStorage.dark === 'true';
-        switchBtn.querySelector('span').textContent = isDark ? 'Light mode' : 'Dark mode';
-    }
-});
+// window.addEventListener('template-loaded', () => {
+//     // createThumbnails();
 
-const isDark = localStorage.dark === 'true';
-document.querySelector('html').classList.toggle('dark', isDark);
+//     let currentSlide = 0;
+//     const slider = document.getElementById('slider');
+//     const slides = document.getElementsByClassName('slider__wrapimage');
 
-// Scroll to the top when the button is clicked
-function goToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-    });
-    //  document.body.scrollTop = 0; // For Safari
-    //document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
-}
+//     function showSlide(index) {
+//         if (index >= slides.length) {
+//             currentSlide = 0;
+//         } else if (index < 0) {
+//             currentSlide = slides.length - 1;
+//         } else {
+//             currentSlide = index;
+//         }
+//         const thumbnails = document.getElementsByClassName('thumbnail');
+//         const displacement = -currentSlide * 100 + '%';
+//         slider.style.transform = 'translateX(' + displacement + ')';
 
-window.addEventListener('template-loaded', () => {
-    // GO TO TOP
-    var alterforwork = document.getElementById('alter-for-work');
-    var goToTopBtn = document.getElementById('back-to-top-btn');
-    var btnHide = document.getElementById('hide-notification');
+//         // Highlight the current thumbnail
+//         for (let i = 0; i < thumbnails.length; i++) {
+//             thumbnails[i].classList.remove('active');
+//         }
+//         thumbnails[currentSlide].classList.add('active');
+//     }
 
-    alterforwork.style.display = 'block';
+//     const preSlide = document.getElementById('prev');
+//     const nextSlide = document.getElementById('next');
 
-    btnHide.onclick = () => {
-        alterforwork.style.display = 'none';
-        return;
-    };
-
-    // Show or hide the button based on the scroll position
-    window.onscroll = function () {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            goToTopBtn.style.display = 'block';
-            //alterforwork.style.display = 'block';
-        } else {
-            goToTopBtn.style.display = 'none';
-            // alterforwork.style.display = 'none';
-        }
-
-        // } else {
-        //     alterforwork.style.display = 'none';
-        //
-    };
-});
+//     preSlide.onclick = () => {
+//         showSlide(currentSlide - 1);
+//     };
+//     nextSlide.onclick = () => {
+//         showSlide(currentSlide + 1);
+//     };
+// });
 
 window.addEventListener('template-loaded', () => {
-    // createThumbnails();
+    var imageSlider = document.getElementsByClassName('slider__items')[0];
+    console.log(document.getElementsByClassName('slider__items')[0].children.length);
+    // console.log(imageSlider);
+    var prevBtn = document.getElementById('prevBtn');
+    var nextBtn = document.getElementById('nextBtn');
 
-    let currentSlide = 0;
-    const slider = document.getElementById('slider');
-    const slides = document.getElementsByClassName('slider__wrapimage');
+    var currentSlide = 0;
 
-    function showSlide(index) {
-        if (index >= slides.length) {
-            currentSlide = 0;
-        } else if (index < 0) {
-            currentSlide = slides.length - 1;
-        } else {
-            currentSlide = index;
-        }
-        const thumbnails = document.getElementsByClassName('thumbnail');
-        const displacement = -currentSlide * 100 + '%';
-        slider.style.transform = 'translateX(' + displacement + ')';
-
-        // Highlight the current thumbnail
-        for (let i = 0; i < thumbnails.length; i++) {
-            thumbnails[i].classList.remove('active');
-        }
-        thumbnails[currentSlide].classList.add('active');
-    }
-
-    const preSlide = document.getElementById('prev');
-    const nextSlide = document.getElementById('next');
-
-    preSlide.onclick = () => {
+    prevBtn.onclick = () => {
         showSlide(currentSlide - 1);
     };
-    nextSlide.onclick = () => {
+
+    nextBtn.onclick = () => {
         showSlide(currentSlide + 1);
     };
+
+    // prevBtn.addEventListener('click', function () {
+    //     showSlide(currentSlide - 1);
+    // });
+
+    // nextBtn.addEventListener('click', function () {
+    //     showSlide(currentSlide + 1);
+    // });
+
+    function showSlide(slideIndex) {
+        //var imageSlider = document.getElementsByClassName('slider__items');
+        //  console.log(imageSlider);
+        var totalSlides = document.getElementsByClassName('slider__items')[0].children.length;
+
+        // Loop back to the first slide if at the end
+        if (slideIndex >= totalSlides) {
+            currentSlide = 0;
+        } else if (slideIndex < 0) {
+            currentSlide = totalSlides - 1;
+        } else {
+            currentSlide = slideIndex;
+        }
+
+        console.log(currentSlide);
+
+        var translateValue = -currentSlide * 50 + '%';
+        imageSlider.style.transform = 'translateX(' + translateValue + ')';
+
+        const items = document.getElementsByClassName('slider__item');
+        console.log(items);
+
+        for (let i = 0; i < items.length; i++) {
+            items[i].classList.remove('slider__item--active');
+        }
+        items[currentSlide].classList.add('slider__item--active');
+    }
 });

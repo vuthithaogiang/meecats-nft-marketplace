@@ -1,0 +1,167 @@
+@use '../abstracts';
+
+.reviews {
+    padding: 140px 0;
+    overflow-x: hidden;
+
+    @include abstracts.breakpoint(lg) {
+        padding: 60px 0 80px 0;
+    }
+
+    &__heading {
+        color: #fff;
+        font-size: 5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 60px;
+        margin-left: calc(2 * 54px + 20px + 46px);
+
+        @include abstracts.breakpoint(lg) {
+            margin-left: 0;
+            margin-bottom: 40px;
+        }
+
+        @include abstracts.breakpoint(md) {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.slider {
+    &__container {
+        display: flex;
+        gap: 46px;
+        align-items: center;
+        position: relative;
+    }
+
+    &__btns {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        @include abstracts.breakpoint(md) {
+            display: none;
+        }
+    }
+
+    &__btn {
+        width: 54px;
+        cursor: pointer;
+
+        img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__items {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: nowrap;
+        transition: transform 0.4s ease-in-out;
+
+        @include abstracts.breakpoint(md) {
+            overflow-y: auto;
+        }
+    }
+
+    &__item {
+        width: min(570px, 100%);
+        flex-shrink: 0;
+        border: 2px solid rgba(227, 255, 113, 0.4);
+        background: #212127;
+        transition: border-radius 0.4s;
+
+        @include abstracts.breakpoint(md) {
+            width: min(79%, 90%);
+        }
+
+        &--inner {
+            padding: 54px 50px;
+
+            @include abstracts.breakpoint(md) {
+                padding: 20px 27px;
+            }
+        }
+
+        &--active {
+            border-radius: 83px 0px 0px 0px;
+
+            @include abstracts.breakpoint(md) {
+                border-radius: 48px 0 0 0;
+            }
+        }
+
+        &--row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &--user {
+            p {
+                color: #fff;
+                font-size: 3rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1;
+                cursor: pointer;
+
+                @include abstracts.breakpoint(md) {
+                    font-size: 2rem;
+                }
+            }
+
+            span {
+                display: block;
+                margin-top: 18px;
+                color: #848484;
+                font-size: 2rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1;
+
+                @include abstracts.breakpoint(md) {
+                    font-size: 1.6rem;
+                    margin-top: 8px;
+                }
+            }
+        }
+
+        &--avatar {
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            cursor: pointer;
+            object-fit: cover;
+
+            @include abstracts.breakpoint(md) {
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        &--desc {
+            margin-top: 75px;
+            color: #fff;
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.7;
+
+            @include abstracts.breakpoint(md) {
+                font-size: 1.6rem;
+                margin-top: 30px;
+            }
+        }
+    }
+}
